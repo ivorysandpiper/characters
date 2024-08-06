@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
 
 @font-face {
-  font-family: 'Atkinson Hyperlegible';
-  src: url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+  font-family: "Atkinson Hyperlegible";
+  src: url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
 }
 
 * {
@@ -11,7 +11,7 @@
 
 body {
   margin: 0;
-  font-family: 'Atkinson Hyperlegible', Helvetica, Arial, sans-serif;
+  font-family: "Atkinson Hyperlegible", Helvetica, Arial, sans-serif;
 }
 
 /* Style the side navigation */
@@ -25,7 +25,6 @@ body {
   background-color: #111;
   overflow-x: hidden;
 }
-
 
 /* Side navigation links */
 .sidenav a {
@@ -46,3 +45,42 @@ body {
   margin-left: 200px;
   padding-left: 20px;
 }
+
+/* WIP - PLAYGROUND */
+summary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background 1.5s;
+}
+
+summary::after {
+  content: "▼";
+  margin-left: auto;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background 1.5s;
+}
+
+details[open] summary::after {
+  content: "▲";
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 
+.character-sheet {
+  display: none;
+}
+.character-sheet:target {
+  display: block;
+}
+*/
