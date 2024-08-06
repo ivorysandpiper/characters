@@ -26,6 +26,36 @@ body {
   overflow-x: hidden;
 }
 
+.sidenav-h1 {
+  padding: 16px;
+  display: block;
+  background: linear-gradient(90deg, lightpink, lavender, cornflowerblue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background 0.5s;
+}
+
+.sidenav-h2 {
+  padding: 16px;
+  display: block;
+  background: linear-gradient(90deg, skyblue, cornsilk);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background 0.5s;
+}
+
+.sidenav-h3 {
+  padding: 16px;
+  display: block;
+  background: linear-gradient(90deg, palegoldenrod, darkseagreen);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background 0.5s;
+}
+
 /* Side navigation links */
 .sidenav a {
   color: white;
