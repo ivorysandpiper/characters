@@ -14,7 +14,9 @@ body {
   font-family: "Atkinson Hyperlegible", Helvetica, Arial, sans-serif;
 }
 
-/* Style the side navigation */
+/******************/
+/* Side nav begin */
+/******************/
 .sidenav {
   height: 100%;
   width: 200px;
@@ -36,26 +38,6 @@ body {
   transition: background 0.5s;
 }
 
-.sidenav-h2 {
-  padding: 16px;
-  display: block;
-  background: linear-gradient(90deg, skyblue, cornsilk);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  transition: background 0.5s;
-}
-
-.sidenav-h3 {
-  padding: 16px;
-  display: block;
-  background: linear-gradient(90deg, palegoldenrod, darkseagreen);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  transition: background 0.5s;
-}
-
 /* Side navigation links */
 .sidenav a {
   color: white;
@@ -66,9 +48,16 @@ body {
 
 /* Change color on hover */
 .sidenav a:hover {
-  background-color: #ddd;
-  color: black;
+  /* background-color: #ddd; */
+  background-color: linear-gradient(90deg, palegoldenrod, darkseagreen);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background 0.5s;
 }
+/****************/
+/* Side nav end */
+/****************/
 
 /* Style the content */
 .content {
@@ -76,7 +65,10 @@ body {
   padding-left: 20px;
 }
 
-/* WIP - PLAYGROUND */
+/*****************************/
+/* Expandable sections begin */
+/*****************************/
+
 summary {
   display: flex;
   align-items: center;
@@ -106,11 +98,6 @@ details[open] summary::after {
   color: transparent;
 }
 
-/* 
-.character-sheet {
-  display: none;
-}
-.character-sheet:target {
-  display: block;
-}
-*/
+/***************************/
+/* Expandable sections end */
+/***************************/

@@ -5,113 +5,31 @@
     <title>Characters</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="common/styles.css" />
   </head>
 
   <body>
-    <script src="script.js"></script>
+    <div id="sidenav-placeholder"></div>
+    <script>
+      fetch("common/sidenav.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("sidenav-placeholder").innerHTML = data;
+        });
+    </script>
 
-    <div class="sidenav">
-      <h1 class="sidenav-h1">Site Title</h1>
-
-      <h2 class="sidenav-h2">Writing Profile</h2>
-      <a href="#about">About the writer</a>
-      <a href="#limits">TODO</a>
-      <a href="#etc">TODO</a>
-
-      <h2 class="sidenav-h2">Characters</h2>
-      <h3 class="sidenav-h3">Original</h3>
-      <a href="#chara-a">Chara A</a>
-
-      <h3 class="sidenav-h3">MGS Universe</h3>
-      <a href="#chara-b">Chara B</a>
-      <a href="#chara-c">Chara C</a>
-    </div>
-
-    <div class="content">
-      <h1>Characters</h1>
-      <p>Characters below</p>
-
-      <div id="chara-a" class="character-sheet">
-        <h2>Character A</h2>
-        <h3>Basics</h3>
-        <p>TODO. Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
-        <h3>Appearance</h3>
-        <p>
-          TODO. Lorem ipsum odor amet, consectetuer adipiscing elit. Taciti nullam nec orci elementum; iaculis lobortis
-          nec condimentum nisi. Sollicitudin id fames erat finibus magna curabitur nisl nibh. Erat praesent donec leo
-          facilisis proin laoreet inceptos egestas donec! Curae est consectetur curae risus ex sociosqu bibendum.
-          Malesuada ridiculus ante at molestie pharetra cubilia.
-        </p>
-        <h3>Another H3</h3>
-        <p>
-          TODO. Lorem ipsum odor amet, consectetuer adipiscing elit. Taciti nullam nec orci elementum; iaculis lobortis
-          nec condimentum nisi. Sollicitudin id fames erat finibus magna curabitur nisl nibh. Erat praesent donec leo
-          facilisis proin laoreet inceptos egestas donec! Curae est consectetur curae risus ex sociosqu bibendum.
-          Malesuada ridiculus ante at molestie pharetra cubilia.
-        </p>
-      </div>
-
-      <div id="chara-b" class="character-sheet">
-        <h2>Character B</h2>
-        <h3>Basics</h3>
-        <p>TODO. Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
-        <h3>Appearance</h3>
-        <p>
-          TODO. Lorem ipsum odor amet, consectetuer adipiscing elit. Taciti nullam nec orci elementum; iaculis lobortis
-          nec condimentum nisi. Sollicitudin id fames erat finibus magna curabitur nisl nibh. Erat praesent donec leo
-          facilisis proin laoreet inceptos egestas donec! Curae est consectetur curae risus ex sociosqu bibendum.
-          Malesuada ridiculus ante at molestie pharetra cubilia.
-        </p>
-        <h3>Another H3</h3>
-        <p>
-          TODO. Lorem ipsum odor amet, consectetuer adipiscing elit. Taciti nullam nec orci elementum; iaculis lobortis
-          nec condimentum nisi. Sollicitudin id fames erat finibus magna curabitur nisl nibh. Erat praesent donec leo
-          facilisis proin laoreet inceptos egestas donec! Curae est consectetur curae risus ex sociosqu bibendum.
-          Malesuada ridiculus ante at molestie pharetra cubilia.
-        </p>
-      </div>
-
-      <div id="chara-c" class="character-sheet">
-        <h2>Character C</h2>
-        <h3>Basics</h3>
-        <p>TODO. Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
-        <h3>Appearance</h3>
-        <p>
-          TODO. Lorem ipsum odor amet, consectetuer adipiscing elit. Taciti nullam nec orci elementum; iaculis lobortis
-          nec condimentum nisi. Sollicitudin id fames erat finibus magna curabitur nisl nibh. Erat praesent donec leo
-          facilisis proin laoreet inceptos egestas donec! Curae est consectetur curae risus ex sociosqu bibendum.
-          Malesuada ridiculus ante at molestie pharetra cubilia.
-        </p>
-        <h3>Another H3</h3>
-        <p>
-          TODO. Lorem ipsum odor amet, consectetuer adipiscing elit. Taciti nullam nec orci elementum; iaculis lobortis
-          nec condimentum nisi. Sollicitudin id fames erat finibus magna curabitur nisl nibh. Erat praesent donec leo
-          facilisis proin laoreet inceptos egestas donec! Curae est consectetur curae risus ex sociosqu bibendum.
-          Malesuada ridiculus ante at molestie pharetra cubilia.
-        </p>
-      </div>
-
-      <hr />
-      <hr />
-      <hr />
-
-      <details>
-        <summary>
-          <h2>Character A</h2>
-        </summary>
-        <p>This is Section 1...</p>
-      </details>
-
-      <details>
-        <summary><h2>Character B</h2></summary>
-        <p>This is Section 2.</p>
-      </details>
-
-      <details>
-        <summary><h2>Character C</h2></summary>
-        <p>This is Section 3!</p>
-      </details>
-    </div>
+    <div id="content-placeholder"></div>
+    <script>
+      function loadContent(page) {
+        fetch(page)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("content").innerHTML = data;
+          });
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        loadContent("default.html");
+      });
+    </script>
   </body>
 </html>
