@@ -6,30 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="common/styles.css" />
-  </head>
-
-  <body>
-    <div id="sidenav-placeholder"></div>
     <script>
       fetch("common/sidenav.html")
         .then((response) => response.text())
         .then((data) => {
-          document.getElementById("sidenav-placeholder").innerHTML = data;
+          document.getElementById("sidenav").innerHTML = data;
         });
-    </script>
 
-    <div id="content-placeholder"></div>
-    <script>
+      let contentLoaded = false;
       function loadContent(page) {
-        fetch(page)
+        contentLoaded = true;
+        fetch(`characters/${page}`)
           .then((response) => response.text())
           .then((data) => {
             document.getElementById("content").innerHTML = data;
           });
       }
+
       document.addEventListener("DOMContentLoaded", () => {
-        loadContent("default.html");
+        if (!contentLoaded) {
+          document.getElementById("content").innerHTML =
+            "<h1>Hey there.</h1><p>Thanks for visiting! Use the sidenav to browse the characters.</p>";
+        }
       });
     </script>
+  </head>
+  <body>
+    <div id="sidenav" class="sidenav"></div>
+    <div id="content" class="content"></div>
   </body>
 </html>

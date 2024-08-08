@@ -1,3 +1,5 @@
+/** TODO - move this to root */
+
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
 
 @font-face {
@@ -35,7 +37,6 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  transition: background 0.5s;
 }
 
 /* Side navigation links */
@@ -48,12 +49,10 @@ body {
 
 /* Change color on hover */
 .sidenav a:hover {
-  /* background-color: #ddd; */
   background-color: linear-gradient(90deg, palegoldenrod, darkseagreen);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  transition: background 0.5s;
 }
 /****************/
 /* Side nav end */
